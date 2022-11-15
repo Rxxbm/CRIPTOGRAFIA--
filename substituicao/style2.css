@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+header{
+    padding: 40px;
+}
+nav div ul li{
+    display: inline-block;
+    padding: 0 20px;
+    color: rgba(128, 128, 128, 0.192);
+}
+nav div ul{
+    padding: 50px 0;
+    align-items: center;
+    display: flexbox;
+    text-align: center;
+}
+li > a{
+    list-style: none;
+    text-decoration: none;
+    color: rgba(128, 128, 128, 0.192);
+}
+a:hover{
+    color: black;
+}
+.tip1{
+    color: black;
+}
+#divInfo{
+    color: white;
+    max-width: 97%;
+    margin: auto;
+    display: flex;
+    max-height: 100%;
+}
+#divInfo h2:first-child{
+    text-transform: uppercase;
+    max-width: 100%;
+    padding: 90px;
+    font-size: 36px;
+    text-align: center;
+    background-color: blueviolet;
+    text-shadow: 0px 0px 3px white;
+}
+#divInfo img{
+    float: right;
+    display: flex;
+    padding: 0 99px;
+    max-height: 130px;
+    vertical-align: top;
+}
+#divInfo p{
+    max-width: 90%;
+    padding: 60px;
+    font-size: 26px;
+    text-align: justify;
+    line-height: 35pt;
+    font-family: cursive;
+    display: absolute;
+    max-height: 100%;
+    background-color: black;
+}
+#divCreditos{
+    max-width: 97%;
+    height: 600px;
+    margin: auto;
+    display: none;
+    color: white;
+}
+#divCifras{
+    max-width: 97%;
+    height: 600px;
+    margin: auto;
+    display: none;
+    color: white;
+    background-color: black;
+}
+.cards{
+    border-style: solid;
+    display: inline-block;
+    background-color: #1c0b2b;
+    width: 180px;
+    height: 160px;
+    margin-top: 70px;
+    margin-right: 10px;
+    margin-left: 1px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.cards:hover{
+    border-style: solid;
+    display: inline-block;
+    color: #1c0b2b;
+    width: 180px;
+    height: 160px;
+    margin-top: 70px;
+    margin-right: 10px;
+    margin-left: 1px;
+    background-color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#div_maeCifra{
+    margin: auto;
+    padding: 40px;
+    width: 84%;
+
+}
+.titu{
+    font-family: "Oswald", sans-serif;
+}
+#div_maeCifra a{
+    text-decoration: none;
+}
+
+
+#div_maeCifra h4{
+    margin-top: 59px;
+}
