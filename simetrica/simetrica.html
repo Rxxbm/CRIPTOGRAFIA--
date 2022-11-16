@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +7,84 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="#">
+        <label for="texto">Digite o texto </label>
+        <input type="text" class="txt">
+        <br>
+        <label for="chave">Digite a chave: </label>
+        <input type="text" class="txt">
+        <br>
+        <button onclick="criptografar()">Enviar</button>
+    </form>
     <script>
-        alert("2" ^ "a")
+        
+        function criptografar(txt, chave){
+            txt = document.getElementsByClassName("txt")[0].value; txt = txt.toUpperCase();  txt = txt.trim();
+            chave = document.getElementsByClassName("txt")[1].value; chave = chave.toUpperCase(); chave = chave.trim();
+            var novChave = "";
+            var i = 0;
+            while (txt.length > novChave.length ){
+                if (i==chave.length){
+                    i=0;
+                }
+                novChave += chave[i]
+                console.log(i)
+                i++;    
+            }
+            
+            console.log("Essa é a chave "+novChave);
+            console.log("Esse é o texto "+ txt)
+            var txtBin = "";
+            var txtAscii = 0;
+            var chaveAscii = 0;
+            var chaveBin = "";
+            var resString = ""
+            var resAscii = ""
+            var resAsciiEsp = ""
+            var resBin = ""
+            var resBincomesp = ""
+            var resetResBin = ""
+            for (var i = 0; i < novChave.length; i++){
+                console.log("Acima do I " +txt[i])
+                txtAscii = txt[i].charCodeAt(); //Transformar texto em ascii
+                chaveAscii = novChave[i].charCodeAt(); //Transformando chave em ascii
+                txtBin = txtAscii.toString(2); //Transformando texto em Binario
+                chaveBin = chaveAscii.toString(2); // Transformando chave em binario
+                //Entrar no loop para fazer o XOR de APENAS uma Letra
+                console.log("Ascii da chave: "+chaveAscii)
+                console.log("Ascii do textox: "+txtAscii)
+                console.log('Binario da chave: '+chaveBin)
+                console.log("Binario do texto: "+txtBin)
+                //CRIPTOGRAFAR
+                for (var j = 0; j < chaveBin.length; j++) {
+                    resBin += ""+chaveBin[j]^txtBin[j]; //Fazendo XOR com binario de txt e chave
+                    resBincomesp += ""+chaveBin[j]^txtBin[j];
+                    resetResBin += ""+chaveBin[j]^txtBin[j];
+                    console.log("Dentro do for J "+resBin)
+                    }
+                    //Aqui termina uma letra
+                    resBincomesp += ' '
+                    console.log('')
+                    //Transformar a resposta binaria em ascii
+                        resAscii += ""+parseInt(resetResBin, 2)
+                        resAsciiEsp += ""+parseInt(resetResBin, 2)
+                        console.log("A STRINGGG EM ASCIII  "+ resAscii)
+                        console.log("")
+                    //Transformar a resposta ascii em caractere
+                        resString += String.fromCharCode(parseInt(resetResBin, 2))
+                        console.log("A STRINGGGG ESCRITAAAA "+ resString)
+                    console.log("")
+                    console.log("Dentro do for I "+resBin)
+                    resAsciiEsp += " "
+                    resetResBin = ""
+                }
+                console.log("A resposta em binario é "+ resBin)
+                console.log("A resposta em binario com espaço "+ resBincomesp)
+                console.log("Resposta em Ascii com espaço "+ resAsciiEsp)
+            }
+        //criptografar();
+        //num.toString(2) transforma em base 2
+        //parseInt(num, 2) transforma em decimal
     </script>
 </body>
 </html>
