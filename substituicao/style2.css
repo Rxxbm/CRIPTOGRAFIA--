@@ -25,6 +25,9 @@ li > a{
 a:hover{
     color: black;
 }
+#download{
+    color: white;
+}
 #download:hover{
     color: white;
 }
