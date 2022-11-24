@@ -25,6 +25,9 @@ li > a{
 a:hover{
     color: black;
 }
+#download:hover{
+    color: white;
+}
 .tip1{
     color: black;
 }
@@ -70,7 +73,7 @@ a:hover{
 .cards{
     margin-top: 30%;
     border-style: solid;
-    padding: 30px;
+    padding: 17px;
     background-color: #1c0b2b;
     width: 140px;
     height: 160px;
